@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const port = 5000;
 const Groq = require('groq-sdk');
-const groq = new Groq({ apiKey: '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' });
+const groq = new Groq({ apiKey: '' });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended : true }));
@@ -68,5 +68,6 @@ app.post('/submit-form', async (req, res) => {
 app.listen(port,()=>{
     console.log('Hello'+`${port}`);
 });
+
 
 app.use(express.static(path.join(__dirname)));
